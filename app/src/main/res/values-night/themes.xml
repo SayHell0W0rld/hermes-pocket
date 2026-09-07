@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Hermes" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/hermes_bg</item>
+        <item name="android:statusBarColor">@color/hermes_bg</item>
+        <item name="android:navigationBarColor">@color/hermes_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="Theme.Hermes.Splash">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

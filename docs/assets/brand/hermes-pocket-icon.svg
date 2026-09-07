@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Hermes Pocket icon">
+  <defs>
+    <linearGradient id="gold" x1="32" y1="24" x2="224" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE566"/>
+      <stop offset=".52" stop-color="#FFD700"/>
+      <stop offset="1" stop-color="#B8860B"/>
+    </linearGradient>
+    <linearGradient id="surface" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121220"/>
+      <stop offset="1" stop-color="#0D0D1A"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#surface)"/>
+  <rect x="12" y="12" width="232" height="232" rx="46" fill="none" stroke="#2A2A45" stroke-width="3"/>
+  <g fill="none" stroke="url(#gold)" stroke-linecap="round">
+    <path d="M56 80c22 15 42 15 72-8" stroke-width="11"/>
+    <path d="M200 80c-22 15-42 15-72-8" stroke-width="11"/>
+    <path d="M128 72v114" stroke-width="10"/>
+    <path d="M100 100c20 25 44 17 35 58" stroke-width="8"/>
+    <path d="M156 100c-20 25-44 17-35 58" stroke-width="8"/>
+  </g>
+  <circle cx="128" cy="54" r="7" fill="url(#gold)"/>
+</svg>

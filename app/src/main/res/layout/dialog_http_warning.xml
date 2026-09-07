@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="4dp"
+    android:paddingRight="20dp">
+
+    <CheckBox
+        android:id="@+id/httpWarningDoNotAsk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/http_warning_do_not_ask"
+        android:textColor="@color/hermes_text"
+        android:textSize="14sp" />
+</LinearLayout>

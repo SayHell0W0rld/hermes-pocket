@@ -1,0 +1,39 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440" role="img" aria-label="Hermes Pocket architecture">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FEFCF7"/>
+      <stop offset="1" stop-color="#F2EADB"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#D4A017"/>
+      <stop offset="1" stop-color="#8B6508"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="440" rx="28" fill="url(#bg)"/>
+  <g font-family="Segoe UI, sans-serif">
+    <rect x="64" y="64" width="304" height="312" rx="22" fill="#FFF" stroke="#E0D8C8" stroke-width="2"/>
+    <rect x="64" y="64" width="304" height="54" rx="22" fill="url(#accent)"/>
+    <text x="216" y="98" text-anchor="middle" fill="#FFF" font-size="24" font-weight="700">Android shell</text>
+    <text x="92" y="156" fill="#1A1610" font-size="19" font-weight="600">Native tab bar</text>
+    <text x="92" y="184" fill="#5C5344" font-size="15">1–5 hot WebViews</text>
+    <text x="92" y="225" fill="#1A1610" font-size="19" font-weight="600">Trusted URL policy</text>
+    <text x="92" y="253" fill="#5C5344" font-size="15">Same-origin WebView routing</text>
+    <text x="92" y="294" fill="#1A1610" font-size="19" font-weight="600">Tailscale guard</text>
+    <text x="92" y="322" fill="#5C5344" font-size="15">VPN readiness and retry</text>
+
+    <path d="M392 220h95" stroke="url(#accent)" stroke-width="5"/>
+    <path d="M481 206l20 14-20 14z" fill="url(#accent)"/>
+    <text x="435" y="200" text-anchor="middle" fill="#5C5344" font-size="14">HTTPS</text>
+
+    <rect x="518" y="64" width="376" height="132" rx="22" fill="#FFF" stroke="#E0D8C8" stroke-width="2"/>
+    <text x="706" y="112" text-anchor="middle" fill="#1A1610" font-size="23" font-weight="700">Hermes WebUI</text>
+    <text x="544" y="150" fill="#5C5344" font-size="15">Chat, sessions, tasks, themes, i18n</text>
+
+    <path d="M706 196v44" stroke="url(#accent)" stroke-width="5"/>
+    <path d="M692 234l14 20 14-20z" fill="url(#accent)"/>
+
+    <rect x="518" y="254" width="376" height="122" rx="22" fill="#FFF" stroke="#E0D8C8" stroke-width="2"/>
+    <text x="706" y="300" text-anchor="middle" fill="#1A1610" font-size="23" font-weight="700">Hermes Agent</text>
+    <text x="544" y="336" fill="#5C5344" font-size="15">Runs on your computer with full tool access</text>
+  </g>
+</svg>

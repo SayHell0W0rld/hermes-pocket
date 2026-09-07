@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light theme (follows WebUI light palette) -->
+    <color name="hermes_bg">#FEFCF7</color>
+    <color name="hermes_panel">#FAF7F0</color>
+    <color name="hermes_panel_hover">#F0EBDD</color>
+    <color name="hermes_border">#E0D8C8</color>
+    <color name="hermes_text">#1A1610</color>
+    <color name="hermes_muted">#5C5344</color>
+    <color name="hermes_hint">#8A8378</color>
+    <color name="hermes_error">#C62828</color>
+    <color name="hermes_accent">#B8860B</color>
+    <color name="hermes_accent_hover">#996F08</color>
+    <color name="hermes_success">#2E7D32</color>
+    <color name="hermes_warning">#B7791F</color>
+    <color name="ic_launcher_background">#FAF7F0</color>
+    <color name="ic_launcher_background_end">#F0EADB</color>
+    <color name="ic_launcher_gold">#B8860B</color>
+    <color name="ic_launcher_gold_light">#D4A017</color>
+    <color name="ic_launcher_gold_dark">#8B6508</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="splash_gradient_start">#FEFCF7</color>
+    <color name="splash_gradient_end">#F2EADB</color>
+</resources>

@@ -1,0 +1,22 @@
+.gradle/
+build/
+app/build/
+local.properties
+keystore.properties
+*.keystore
+*.jks
+.env
+.idea/
+*.iml
+.DS_Store
+*.log
+captures/
+.externalNativeBuild/
+.cxx/
+# local task working files (not part of the open-source docs)
+docs/task-history/
+docs/superpowers/
+docs/task-history/
+*.draft.md
+AGENTS.md.draft
+logs/

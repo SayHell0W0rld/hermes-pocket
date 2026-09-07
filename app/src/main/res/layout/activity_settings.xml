@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hermes_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/settings_title"
+            android:textColor="@color/hermes_text"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/settings_subtitle"
+            android:textColor="@color/hermes_muted"
+            android:textSize="13sp" />
+
+        <RadioGroup
+            android:id="@+id/protocolGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/protocolHttps"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hermes_accent"
+                android:checked="true"
+                android:minWidth="0dp"
+                android:text="@string/protocol_https"
+                android:textColor="@color/hermes_accent"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/protocolHttp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hermes_accent"
+                android:minWidth="0dp"
+                android:text="@string/protocol_http"
+                android:textColor="@color/hermes_muted"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/serverUrlInput"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:hint="@string/server_host_hint"
+            android:importantForAutofill="no"
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/hermes_text"
+            android:textColorHint="@color/hermes_hint"
+            android:textCursorDrawable="@drawable/cursor_gold"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/httpsEducationCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_panel"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingLeft="14dp"
+            android:paddingTop="14dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="14dp">
+
+            <TextView
+                android:id="@+id/httpsEducationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/https_education_title"
+                android:textColor="@color/hermes_accent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/httpsEducationSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/https_education_https_summary"
+                android:textColor="@color/hermes_success"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/httpsEducationDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/https_education_voice"
+                    android:textColor="@color/hermes_text"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/https_education_notifications"
+                    android:textColor="@color/hermes_text"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/https_education_encryption"
+                    android:textColor="@color/hermes_text"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/https_education_tailscale"
+                    android:textColor="@color/hermes_text"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/httpsEducationFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/https_education_http_footer"
+                android:textColor="@color/hermes_muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_panel"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/hermes_text"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/testButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/selector_button_secondary"
+            android:fontFamily="sans-serif"
+            android:text="@string/test_connection"
+            android:textAllCaps="false"
+            android:textColor="@color/hermes_text"
+            android:textSize="15sp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hotWebViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/settings_hot_webview_count"
+                    android:textColor="@color/hermes_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/hotWebViewGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/hotWebViewOne"
+                        style="@style/SettingsChip"
+                        android:text="@string/settings_hot_webview_one" />
+
+                    <RadioButton
+                        android:id="@+id/hotWebViewTwo"
+                        style="@style/SettingsChip"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/settings_hot_webview_two" />
+
+                    <RadioButton
+                        android:id="@+id/hotWebViewThree"
+                        style="@style/SettingsChip"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/settings_hot_webview_three" />
+
+                    <RadioButton
+                        android:id="@+id/hotWebViewFour"
+                        style="@style/SettingsChip"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/settings_hot_webview_four" />
+
+                    <RadioButton
+                        android:id="@+id/hotWebViewFive"
+                        style="@style/SettingsChip"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/settings_hot_webview_five" />
+                </RadioGroup>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/settings_hot_webview_warning"
+            android:textColor="@color/hermes_warning"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fontZoomTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/settings_font_zoom"
+            android:textColor="@color/hermes_text"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/fontZoomGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/fontZoom100"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hermes_accent"
+                android:minWidth="0dp"
+                android:text="@string/settings_font_zoom_100"
+                android:textColor="@color/hermes_text" />
+
+            <RadioButton
+                android:id="@+id/fontZoom110"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hermes_accent"
+                android:minWidth="0dp"
+                android:text="@string/settings_font_zoom_110"
+                android:textColor="@color/hermes_text" />
+
+            <RadioButton
+                android:id="@+id/fontZoom130"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hermes_accent"
+                android:minWidth="0dp"
+                android:text="@string/settings_font_zoom_130"
+                android:textColor="@color/hermes_text" />
+
+            <RadioButton
+                android:id="@+id/fontZoom150"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hermes_accent"
+                android:minWidth="0dp"
+                android:text="@string/settings_font_zoom_150"
+                android:textColor="@color/hermes_text" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/tailscaleGuardToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:buttonTint="@color/hermes_accent"
+            android:text="@string/settings_tailscale_guard"
+            android:textColor="@color/hermes_text" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/selector_button_primary"
+            android:fontFamily="sans-serif"
+            android:text="@string/save_and_launch"
+            android:textAllCaps="false"
+            android:textColor="@color/hermes_bg"
+            android:textSize="15sp" />
+    </LinearLayout>
+</ScrollView>

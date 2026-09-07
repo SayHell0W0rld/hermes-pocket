@@ -1,0 +1,134 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hermes_bg"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/onboardingStepText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/hermes_muted"
+                android:textSize="13sp" />
+            <Button
+                android:id="@+id/skipButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:text="@string/onboarding_skip"
+                android:textAllCaps="false"
+                android:textColor="@color/hermes_accent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <View android:id="@+id/progressOne" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="@color/hermes_accent" />
+            <View android:id="@+id/progressTwo" android:layout_width="0dp" android:layout_height="4dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:background="@color/hermes_border" />
+            <View android:id="@+id/progressThree" android:layout_width="0dp" android:layout_height="4dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:background="@color/hermes_border" />
+            <View android:id="@+id/progressFour" android:layout_width="0dp" android:layout_height="4dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:background="@color/hermes_border" />
+            <View android:id="@+id/progressFive" android:layout_width="0dp" android:layout_height="4dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:background="@color/hermes_border" />
+            <View android:id="@+id/progressSix" android:layout_width="0dp" android:layout_height="4dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:background="@color/hermes_border" />
+            <View android:id="@+id/progressSeven" android:layout_width="0dp" android:layout_height="4dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:background="@color/hermes_border" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/welcomeStep" style="@style/OnboardingCard">
+            <TextView style="@style/OnboardingTitle" android:text="@string/onboarding_welcome_title" />
+            <TextView style="@style/OnboardingBody" android:text="@string/onboarding_welcome_desc" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/serverStep" style="@style/OnboardingCard">
+            <TextView style="@style/OnboardingTitle" android:text="@string/onboarding_server_title" />
+            <TextView style="@style/OnboardingBody" android:text="@string/onboarding_server_desc" />
+            <RadioGroup
+                android:id="@+id/onboardingProtocolGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/onboardingProtocolHttps"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/hermes_accent"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:text="@string/protocol_https"
+                    android:textColor="@color/hermes_accent"
+                    android:textSize="14sp" />
+                <RadioButton
+                    android:id="@+id/onboardingProtocolHttp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/hermes_accent"
+                    android:minWidth="0dp"
+                    android:text="@string/protocol_http"
+                    android:textColor="@color/hermes_muted"
+                    android:textSize="14sp" />
+            </RadioGroup>
+            <EditText android:id="@+id/onboardingServerInput" style="@style/HermesEditText" android:hint="@string/server_host_hint" android:inputType="textUri" />
+            <TextView android:id="@+id/onboardingStatusText" style="@style/OnboardingBody" android:visibility="gone" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <Button android:id="@+id/onboardingTestButton" style="@style/OnboardingSecondaryButton" android:text="@string/test_connection" />
+                <Button android:id="@+id/onboardingSaveButton" style="@style/OnboardingPrimaryButton" android:layout_marginLeft="12dp" android:text="@string/save_and_launch" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/languageStep" style="@style/OnboardingCard">
+            <TextView style="@style/OnboardingTitle" android:text="@string/onboarding_lang_title" />
+            <TextView style="@style/OnboardingBody" android:text="@string/onboarding_lang_desc" />
+            <TextView android:id="@+id/languageSystemValue" style="@style/OnboardingBody" android:textColor="@color/hermes_muted" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <Button android:id="@+id/languageFollowButton" style="@style/OnboardingPrimaryButton" android:text="@string/onboarding_lang_follow" />
+                <Button android:id="@+id/languageKeepButton" style="@style/OnboardingSecondaryButton" android:layout_marginLeft="12dp" android:text="@string/onboarding_lang_keep" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/themeStep" style="@style/OnboardingCard">
+            <TextView style="@style/OnboardingTitle" android:text="@string/onboarding_theme_title" />
+            <TextView style="@style/OnboardingBody" android:text="@string/onboarding_theme_desc" />
+            <TextView android:id="@+id/themeSystemValue" style="@style/OnboardingBody" android:textColor="@color/hermes_muted" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <Button android:id="@+id/themeFollowButton" style="@style/OnboardingPrimaryButton" android:text="@string/onboarding_theme_follow" />
+                <Button android:id="@+id/themeKeepButton" style="@style/OnboardingSecondaryButton" android:layout_marginLeft="12dp" android:text="@string/onboarding_theme_keep" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/textStep" style="@style/OnboardingCard">
+            <TextView style="@style/OnboardingTitle" android:text="@string/onboarding_text_title" />
+            <TextView style="@style/OnboardingBody" android:text="@string/onboarding_text_desc" />
+            <TextView android:id="@+id/textPreview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_panel" android:padding="14dp" android:text="@string/onboarding_text_preview" android:textColor="@color/hermes_text" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <Button android:id="@+id/textSystemButton" style="@style/OnboardingSecondaryButton" android:text="@string/onboarding_text_system" />
+                <Button android:id="@+id/text115Button" style="@style/OnboardingSecondaryButton" android:layout_marginLeft="8dp" android:text="@string/onboarding_text_115" />
+                <Button android:id="@+id/text130Button" style="@style/OnboardingSecondaryButton" android:layout_marginLeft="8dp" android:text="@string/onboarding_text_130" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/notificationStep" style="@style/OnboardingCard">
+            <TextView style="@style/OnboardingTitle" android:text="@string/onboarding_notification_title" />
+            <TextView style="@style/OnboardingBody" android:text="@string/onboarding_notification_desc" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <Button android:id="@+id/enableNotificationsButton" style="@style/OnboardingPrimaryButton" android:text="@string/onboarding_enable_notifications" />
+                <Button android:id="@+id/notificationLaterButton" style="@style/OnboardingSecondaryButton" android:layout_marginLeft="12dp" android:text="@string/onboarding_notifications_later" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/completeStep" style="@style/OnboardingCard">
+            <TextView style="@style/OnboardingTitle" android:text="@string/onboarding_complete_title" />
+            <TextView style="@style/OnboardingBody" android:text="@string/onboarding_complete_desc" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:orientation="horizontal">
+            <Button android:id="@+id/backButton" style="@style/OnboardingSecondaryButton" android:text="@string/onboarding_back" />
+            <Button android:id="@+id/nextButton" style="@style/OnboardingPrimaryButton" android:layout_marginLeft="12dp" android:text="@string/onboarding_next" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
